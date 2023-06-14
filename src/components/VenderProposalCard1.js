@@ -11,7 +11,7 @@ const VenderProposalCard1 = (props) => {
     const { contact } = useParams();
     useEffect(() => {
       axios
-        .get(`https://eventbackend-2hj4.onrender.com/vendorproposals/${contact}`)
+        .get(`http://localhost:3300/vendorproposals/${contact}`)
         .then((response) => {
           setVendor(response.data.vendor);
         })

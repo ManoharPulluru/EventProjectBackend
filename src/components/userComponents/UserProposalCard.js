@@ -5,7 +5,7 @@ const UserProposalCard = (props) => {
   return (
     <div className='user-card-container'>
       <div >
-        <img className='user-card-image' alt='card' src='https://www.tamarindglobal.com/images/events/events.jpg'/>
+        <img className='user-card-image' alt='card' src={event.images[0]}/>
       </div>
       <div className='user-card-details'>
         <div className='user-card-vendorName'>{event.vendorName}</div>

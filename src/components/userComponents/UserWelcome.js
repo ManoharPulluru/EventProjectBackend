@@ -16,7 +16,7 @@ const UserWelcome = () => {
 
   useEffect(() => {
     axios
-      .get(`https://eventbackend-2hj4.onrender.com/finduser/${contact}`)
+      .get(`http://localhost:3300/finduser/${contact}`)
       .then((response) => {
         setUserData(response.data);
       })
@@ -24,7 +24,7 @@ const UserWelcome = () => {
         console.error(error);
       });
 
-    axios.get('https://eventbackend-2hj4.onrender.com/getglobaldata')
+    axios.get('http://localhost:3300/getglobaldata')
       .then((res) => {
         setGlobalData(res.data);
       })
@@ -33,7 +33,7 @@ const UserWelcome = () => {
       });
 
     axios
-      .get(`https://eventbackend-2hj4.onrender.com/getuser/${contact}`)
+      .get(`http://localhost:3300/getuser/${contact}`)
       .then((res) => {
         setUserSelections(res.data);
       })
