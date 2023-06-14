@@ -1,0 +1,157 @@
+.form-parent {
+    font-family: 'Open Sans', sans-serif;
+    height: 29.5vw;
+    width: 24.8vw;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-head {
+    height: 15%;
+    border-bottom: 1px solid #e9eef0;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.14vw;
+    font-weight: 600;
+}
+
+.form-head :hover {
+    color: #4E94F4;
+}
+
+.form-body {
+    height: 55%;
+}
+
+.form-check {
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+}
+
+.form-foot {
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.vendor-heading {
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid #e9eef0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1B2734;
+}
+
+.user-heading {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1B2734;
+}
+
+.sign-in {
+    margin-top: 2vw;
+    margin-left: 2vw;
+    font-size: 1.3vw;
+}
+
+.sign-in-div {
+    margin-top: 2.08vw;
+    margin-left: 2vw;
+}
+
+.signin-ip {
+    width: 20vw;
+    height: 2.8vw;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #ED4451;
+    border-radius: 4px;
+    opacity: 1;
+    letter-spacing: 0.16px;
+    color: #A5A1A1;;
+    font-size: 1vw;
+}
+
+.signin-ip:hover {
+    border: 1px solid #4E94F4;
+}
+
+.password-div {
+    margin-top: 1.56vw;
+    margin-left: 2vw;
+}
+
+.check-pass {
+    display: flex;
+    width: 60%;
+    font-size: 0.72vw;
+    align-items: center;
+    margin-left: 2vw;
+    font-weight: 700;
+    letter-spacing: 0.56px;
+    color: #ED4451;
+    opacity: 1;
+}
+
+.forget-pass {
+    display: flex;
+    
+    font-size: 0.72vw;
+    letter-spacing: 0px;
+    color: #04425A;
+    opacity: 1;
+}
+
+.create-ac {
+    width: 50%;
+    margin-left: 2vw;
+    font-size: 1.24vw;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #4E94F4;
+    opacity: 1;
+}
+.create-ac:hover {
+    cursor: pointer;
+}
+
+.login-button-div {
+    display: flex;
+    margin-left: 2vw;
+}
+
+.login-but {
+    margin-top: 1vw;
+    width: 6.6vw;
+    height: 3vw;
+    background: #4E94F4 0% 0% no-repeat padding-box;
+border-radius: 8px;
+opacity: 1;
+font-size: 1vw;
+letter-spacing: 0px;
+color: #FFFFFF;
+text-transform: uppercase;
+border: none;
+}
+.login-but:hover {
+    cursor: pointer;
+}
+.button-no-border {
+    border: none;
+    background-color: none;
+}
+.no-underline {
+    text-decoration: none;
+}
+  

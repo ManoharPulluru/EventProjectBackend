@@ -1,0 +1,84 @@
+.proposalsbar {
+    display: flex;
+    align-items: center;
+    margin-left: 230px;
+    height: 28px;
+    margin-top: 70px;
+    
+}
+.inputsearch {
+    border: none;
+    color: #C7C7C7
+}
+.flexing-proposals{
+    display: flex;
+    flex-direction: column;
+    width: 77vw;
+    justify-content: center;
+    margin-left: 10.7vw;
+}
+.proposalstext {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.72px;
+    color: #081838;
+    opacity: 1;
+}
+
+.searchicon {
+    height: 14.45px;
+    width: 14.97px;
+    border-radius: 7.2px;
+    margin-left: 26px;
+    margin-right: 10px;
+}
+
+.filter {
+    height: 25px;
+    width: 25px;
+    margin-left: 416px;
+}
+
+.createbutton {
+    margin-left: 24.28px;
+    top: 125px;
+    left: 1556px;
+    width: 127px;
+    height: 56px;
+    border: none;
+    /* UI Properties */
+    background: #4E94F4 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+}
+.log-out-ven {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin: 10px;
+}
+.log-out-ven-btn {
+    background-color: #4E94F4;
+    color: white;
+    height: 3vw;
+    width: 10vw;
+    border: none;
+    border-radius: 8px;
+    
+}
+.log-out-ven-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px green;
+}
+.createbutton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px green;
+}

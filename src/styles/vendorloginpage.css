@@ -1,0 +1,33 @@
+.bg-image {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 0.5vw;
+    padding-left: 2vw;
+}
+.logo-in-v-credpage {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    font-size: 1.662vw;
+    font-weight: 600;
+    letter-spacing: 0.066px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.v-login-container {
+    display: flex;
+    height: 86%;
+    align-items: center;
+    flex-direction: row;
+}
+.v-login-container-box-left {
+    margin-left: 6.1vw;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3.7vw;
+    height: 15vw;
+    width: 27.5vw;
+    color: white;
+}
+.login-form {
+    margin-left: 33.7vw;
+}

@@ -1,0 +1,61 @@
+.edit-prop-container {
+    display: flex;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .edit-prop-box {
+    width: 50vw;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vw;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inputs-edit-prop {
+    margin-top: 1vw;
+    width: 90%;
+    height: 3vw;
+    padding: 0.5vw;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    margin-top: 2vw;
+    width: 40%;
+    height: 3.5vw;
+    padding: 0.5vw;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  .selects-edit {
+    display: flex;
+    flex-direction: row;
+  }
+  .inputs-edit-prop1{
+    width: auto;
+    margin-top: 1vw;
+    height: 3.5vw;
+    padding: 0.5vw;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }

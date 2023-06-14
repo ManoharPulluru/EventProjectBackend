@@ -1,0 +1,48 @@
+.header {
+    width: 100vw;
+    height: 70px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #FFFFFF;
+    opacity: 1;
+}
+.logo {
+    width: 50%;
+    text-align: left;
+    margin-left: 2.08vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.28px;
+    color: #64A1F5;
+    opacity: 1;
+}
+
+.vendorname {
+    width: 50%;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #64A1F5;
+    opacity: 1;
+}
+
+.vendorimage {
+    margin-left: 1.196vw;
+    margin-right: 2vh;
+    height: 36px;
+    width: 36px;
+    border-radius: 18px;
+}
+.proposalsearchbar{
+    margin-left: 10vw;
+    border: 1px solid black;
+    font-family: 'Open Sans', sans-serif;
+}
