@@ -6,45 +6,47 @@ import '../../styles/welcomeUser.css';
 import welcome from '../../images/welcome.png';
 import UserProposalCard from './UserProposalCard';
 import { useNavigate } from 'react-router-dom';
+
 const UserWelcome = () => {
   const [userData, setUserData] = useState('');
   const [globalData, setGlobalData] = useState([]);
   const { contact } = useParams();
-  const [sel,setSel] = useState(null);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [userSelections, setUserSelections] = useState([]);
+
   useEffect(() => {
     axios
       .get(`http://localhost:3300/finduser/${contact}`)
       .then((response) => {
         setUserData(response.data);
-        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+    axios.get('http://localhost:3300/getglobaldata')
+      .then((res) => {
+        setGlobalData(res.data);
       })
       .catch((error) => {
         console.error(error);
       });
 
     axios
-      .get('http://localhost:3300/getglobaldata')
+      .get(`http://localhost:3300/getuser/${contact}`)
       .then((res) => {
-        setGlobalData(res.data);
-        console.log(res.data);
+        setUserSelections(res.data);
       })
       .catch((error) => {
         console.error(error);
       });
   }, [contact]);
-
-  axios.get(`http://localhost:3300/updateuserselections/${globalData.eventName}/${globalData.contact}/${userData.contact}`).then((res)=>{
-    setSel(res.data)
-  }).catch((err)=>{
-    console.log(err);
-  })
+  const toggleSignout=()=>{
+    navigate('/usersignin')
+  }
   const handleCardClick = (cardData) => {
-    // Handle the click event for a specific card
     console.log('Clicked on card:', cardData);
-
-    navigate(`/openevent/${cardData.eventName}/${cardData.vendorContact}`)
-    
+    navigate(`/openevent/${cardData.eventName}/${cardData.vendorContact}`);
   };
 
   return (
@@ -53,9 +55,15 @@ const UserWelcome = () => {
       <div>
         <img className='welcome-img' alt='welcome' src={welcome} />
       </div>
+      <div className='logout-btn-wel'><button onClick={toggleSignout} className='signout-btn-wel'>SIGNOUT</button></div>
       <div>
         <div className='proposals-h'>Selections</div>
         <div className='proposals-cards-user'>
+          {userSelections.map((selected, index) => (
+            <div key={index}>
+              <UserProposalCard data={selected}/>
+            </div>
+          ))}
         </div>
       </div>
       <div>

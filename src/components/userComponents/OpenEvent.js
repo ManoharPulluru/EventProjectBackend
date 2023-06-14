@@ -28,11 +28,11 @@ const OpenEvent = () => {
         console.error(error);
       });
   }, [eventname, contact]);
-console.log(eventData);
 
 const toggleSelect=()=>{
+
   axios.get(`http://localhost:3300/updateuserselections/${eventData.eventName}/${eventData.vendorContact}/${userData.contact}`).then((res)=>{
-    alert(res.data);
+    alert('Event dded to Selections');
     navigate(`/userwelcome/${userData.contact}`)
   }).catch((err)=>{
     console.log(err);

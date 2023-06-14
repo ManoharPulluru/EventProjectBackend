@@ -22,5 +22,20 @@
     font-size: 1.2vw;
     font-weight: 600;
     color:  #575A5D;;
-
+}
+.logout-btn-wel{
+    text-align: right;
+}
+.signout-btn-wel{
+    background: #4E94F4 0% 0% no-repeat padding-box;
+border-radius: 8px;
+opacity: 1;
+color: white;
+border: none;
+height: 2vw;
+margin-right: 2vw;
+}
+.signout-btn-wel:hover {
+    box-shadow: 0 0 5px green;
+    cursor: pointer;
 }
