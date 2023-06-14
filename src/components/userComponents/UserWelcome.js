@@ -16,7 +16,7 @@ const UserWelcome = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3300/finduser/${contact}`)
+      .get(`https://event-proposal-backend-w3o5.onrender.com/finduser/${contact}`)
       .then((response) => {
         setUserData(response.data);
       })
@@ -24,7 +24,7 @@ const UserWelcome = () => {
         console.error(error);
       });
 
-    axios.get('http://localhost:3300/getglobaldata')
+    axios.get('https://event-proposal-backend-w3o5.onrender.com/getglobaldata')
       .then((res) => {
         setGlobalData(res.data);
       })
@@ -33,7 +33,7 @@ const UserWelcome = () => {
       });
 
     axios
-      .get(`http://localhost:3300/getuser/${contact}`)
+      .get(`https://event-proposal-backend-w3o5.onrender.com/getuser/${contact}`)
       .then((res) => {
         setUserSelections(res.data);
       })

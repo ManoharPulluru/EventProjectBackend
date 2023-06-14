@@ -8,7 +8,7 @@ const ProposalForm = () => {
   const [vendor, setVendor] = useState('');
   const { contact } = useParams();
   useEffect(() => {
-    axios.get(`http://localhost:3300/vendorproposals/${contact}`)
+    axios.get(`https://event-proposal-backend-w3o5.onrender.com/vendorproposals/${contact}`)
       .then((response) => {
         setVendor(response.data.vendor);
       })
@@ -88,7 +88,7 @@ const ProposalForm = () => {
     event.preventDefault();
     const vendorName = vendor.username
     const vendorContact = vendor.contact
-    axios.post(`http://localhost:3300/vendorcreateproposal/${vendor?.contact}`, {
+    axios.post(`https://event-proposal-backend-w3o5.onrender.com/vendorcreateproposal/${vendor?.contact}`, {
       vendorName: vendorName,
       vendorContact: vendorContact,
       eventName: eventName,

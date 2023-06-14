@@ -38,7 +38,7 @@ const VendorSignupForm = () => {
       password,
       confirmpassword,
     };
-    axios.post('http://localhost:3300/vendorsignup', vendorData)
+    axios.post('https://event-proposal-backend-w3o5.onrender.com/vendorsignup', vendorData)
       .then(response => {
         alert(response.data);
       })

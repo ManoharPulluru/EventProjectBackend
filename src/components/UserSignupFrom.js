@@ -39,7 +39,7 @@ const UserSignupForm = () => {
       confirmPassword
     };
 
-    axios.post('http://localhost:3300/usersignup', userData)
+    axios.post('https://event-proposal-backend-w3o5.onrender.com/usersignup', userData)
       .then(response => {
         alert(`${response.data}`)
         console.log(response.data); // Handle success response

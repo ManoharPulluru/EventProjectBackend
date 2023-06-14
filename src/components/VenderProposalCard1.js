@@ -11,7 +11,7 @@ const VenderProposalCard1 = (props) => {
     const { contact } = useParams();
     useEffect(() => {
       axios
-        .get(`http://localhost:3300/vendorproposals/${contact}`)
+        .get(`https://event-proposal-backend-w3o5.onrender.com/vendorproposals/${contact}`)
         .then((response) => {
           setVendor(response.data.vendor);
         })
@@ -23,7 +23,7 @@ const VenderProposalCard1 = (props) => {
 const toggleDelete = () => {
   const confirmation = window.confirm('Are you sure you want to delete this event?');
   if (confirmation) {
-    axios.delete(`http://localhost:3300/vendorproposals/${ven.eventName}/${vendor.contact}`)
+    axios.delete(`https://event-proposal-backend-w3o5.onrender.com/vendorproposals/${ven.eventName}/${vendor.contact}`)
       .then((res) => {
         alert('Event Deleted');
         window.location.reload();

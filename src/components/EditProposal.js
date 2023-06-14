@@ -10,7 +10,7 @@ const EditProposal = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3300/vendorproposals/editproposal/${contact}`)
+      .get(`https://event-proposal-backend-w3o5.onrender.com/vendorproposals/editproposal/${contact}`)
       .then((response) => {
         setVendorSelections(response.data);
       })
@@ -33,7 +33,7 @@ const EditProposal = () => {
 
   const handleSubmit = () => {
     console.log('Done');
-    axios.post(`http://localhost:3300/vendorproposals/editproposal/${vendorSelections.eventName}/${contact}`,{
+    axios.post(`https://event-proposal-backend-w3o5.onrender.com/vendorproposals/editproposal/${vendorSelections.eventName}/${contact}`,{
         eventName,placeOfEvent,proposalType,eventType,budget,from,to,description,images,foodPreferences,events
     }).then((res)=>{
         alert(res.data);
