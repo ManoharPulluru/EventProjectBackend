@@ -1,10 +1,15 @@
 import React from 'react'
-import Header from './Header'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
     <div>
-        <Header/>
+        <center>
+          <Link to='/vendorsignin'>
+          <button>Vendor</button></Link>
+          <Link to='/usersignin'>
+          <button>User</button></Link>
+        </center>
     </div>
   )
 }
