@@ -24,7 +24,7 @@ const LoginForm = () => {
       emailOrContact: emailOrContact,
       password: password
     };
-    axios.post('http://localhost:3300/vendorsignin', formData)
+    axios.post('https://eventbackend-2hj4.onrender.com/vendorsignin', formData)
       .then((response) => {
         let pass = response.data;
         console.log(pass)

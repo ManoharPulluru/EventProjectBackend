@@ -12,7 +12,7 @@ const OpenEvent = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3300/finduser/${contact}`)
+      .get(`https://eventbackend-2hj4.onrender.com/finduser/${contact}`)
       .then((response) => {
         setUserData(response.data);
       })
@@ -20,7 +20,7 @@ const OpenEvent = () => {
         console.error(error);
       });
 
-    axios.get(`http://localhost:3300/getglobaldata/${eventname}/${contact}`)
+    axios.get(`https://eventbackend-2hj4.onrender.com/${eventname}/${contact}`)
       .then((response) => {
         setEventData(response.data);
       })
@@ -31,7 +31,7 @@ const OpenEvent = () => {
 
 const toggleSelect=()=>{
 
-  axios.get(`http://localhost:3300/updateuserselections/${eventData.eventName}/${eventData.vendorContact}/${userData.contact}`).then((res)=>{
+  axios.get(`https://eventbackend-2hj4.onrender.com/${eventData.eventName}/${eventData.vendorContact}/${userData.contact}`).then((res)=>{
     alert('Event dded to Selections');
     navigate(`/userwelcome/${userData.contact}`)
   }).catch((err)=>{

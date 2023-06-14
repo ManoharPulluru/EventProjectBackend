@@ -7,7 +7,7 @@ const ProposalCreatePage = () => {
   const [vendor,setVendor] = useState('');
   const { contact } = useParams();
   useEffect(() => {
-    axios.get(`http://localhost:3300/vendorproposals/${contact}`)
+    axios.get(`https://eventbackend-2hj4.onrender.com/vendorproposals/${contact}`)
       .then((response) => {
         setVendor(response.data.vendor);
       })

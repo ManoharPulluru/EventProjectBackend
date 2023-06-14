@@ -73,7 +73,7 @@ const ProposalForm = () => {
     event.preventDefault();
     const vendorName = vendor.username
     const vendorContact = vendor.contact
-    axios.post(`http://localhost:3300/vendorcreateproposal/${vendor.contact}`,{
+    axios.post(`https://eventbackend-2hj4.onrender.com/vendorcreateproposal/${vendor.contact}`,{
       vendorName: vendorName,
       vendorContact : vendorContact,
       eventName: eventName,
