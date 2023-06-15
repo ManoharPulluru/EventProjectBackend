@@ -6,7 +6,7 @@ import '../../styles/welcomeUser.css';
 import welcome from '../../images/welcome.png';
 import UserProposalCard from './UserProposalCard';
 import { useNavigate } from 'react-router-dom';
-
+import api from '../../api';
 const UserWelcome = () => {
   const [userData, setUserData] = useState('');
   const [globalData, setGlobalData] = useState([]);
@@ -16,7 +16,7 @@ const UserWelcome = () => {
 
   useEffect(() => {
     axios
-      .get(`https://event-proposal-backend-w3o5.onrender.com/finduser/${contact}`)
+      .get(`${api}/finduser/${contact}`)
       .then((response) => {
         setUserData(response.data);
       })
@@ -24,7 +24,7 @@ const UserWelcome = () => {
         console.error(error);
       });
 
-    axios.get('https://event-proposal-backend-w3o5.onrender.com/getglobaldata')
+    axios.get(`${api}/getglobaldata`)
       .then((res) => {
         setGlobalData(res.data);
       })
@@ -33,7 +33,7 @@ const UserWelcome = () => {
       });
 
     axios
-      .get(`https://event-proposal-backend-w3o5.onrender.com/getuser/${contact}`)
+      .get(`${api}/getuser/${contact}`)
       .then((res) => {
         setUserSelections(res.data);
       })
@@ -46,7 +46,7 @@ const UserWelcome = () => {
   }
   const handleCardClick = (cardData) => {
     console.log('Clicked on card:', cardData);
-    navigate(`/openevent/${cardData.eventName}/${cardData.vendorContact}`);
+    navigate(`/openevent/${cardData.eventName}/${userData.contact}/${cardData.vendorContact}`);
   };
 
   return (

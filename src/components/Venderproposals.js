@@ -8,14 +8,14 @@ import Header from './Header';
 import '../styles/venderproposals.css';
 import VenderProposalCard1 from './VenderProposalCard1';
 import axios from 'axios';
-
+import api from '../api';
 const Venderproposals = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [vendor, setVendor] = useState('');
   const { contact } = useParams();
   useEffect(() => {
     axios
-      .get(`https://event-proposal-backend-w3o5.onrender.com/vendorproposals/${contact}`)
+      .get(`${api}/vendorproposals/${contact}`)
       .then((response) => {
         setVendor(response.data.vendor);
       })

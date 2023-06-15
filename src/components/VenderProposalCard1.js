@@ -5,13 +5,14 @@ import del from '../images/bin.png'
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
+import api from '../api'
 const VenderProposalCard1 = (props) => {
     const navigate = useNavigate()
     const [vendor, setVendor] = useState('');
     const { contact } = useParams();
     useEffect(() => {
       axios
-        .get(`https://event-proposal-backend-w3o5.onrender.com/vendorproposals/${contact}`)
+        .get(`${api}/vendorproposals/${contact}`)
         .then((response) => {
           setVendor(response.data.vendor);
         })
@@ -23,7 +24,7 @@ const VenderProposalCard1 = (props) => {
 const toggleDelete = () => {
   const confirmation = window.confirm('Are you sure you want to delete this event?');
   if (confirmation) {
-    axios.delete(`https://event-proposal-backend-w3o5.onrender.com/vendorproposals/${ven.eventName}/${vendor.contact}`)
+    axios.delete(`${api}/vendorproposals/${ven.eventName}/${vendor.contact}`)
       .then((res) => {
         alert('Event Deleted');
         window.location.reload();

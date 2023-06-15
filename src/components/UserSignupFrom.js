@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/signupform.css';
 import { Link } from 'react-router-dom';
-
+import api from '../api';
 const UserSignupForm = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -39,7 +39,7 @@ const UserSignupForm = () => {
       confirmPassword
     };
 
-    axios.post('https://event-proposal-backend-w3o5.onrender.com/usersignup', userData)
+    axios.post(`${api}/usersignup`, userData)
       .then(response => {
         alert(`${response.data}`)
         console.log(response.data); // Handle success response

@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../styles/loginform.css';
 import { Link } from 'react-router-dom';
 import {useNavigate} from 'react-router-dom';
+import api from '../api';
 const LoginForm = () => {
   const navigate = useNavigate();
   const [displaymessage,setDisplaymessage] = useState('') 
@@ -24,7 +25,7 @@ const LoginForm = () => {
       emailOrContact: emailOrContact,
       password: password
     };
-    axios.post('https://event-proposal-backend-w3o5.onrender.com/vendorsignin', formData)
+    axios.post(`${api}/vendorsignin`, formData)
       .then((response) => {
         let pass = response.data;
         console.log(pass)

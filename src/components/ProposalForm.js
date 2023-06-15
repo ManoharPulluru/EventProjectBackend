@@ -3,12 +3,13 @@ import '../styles/form.css';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import api from '../api';
 const ProposalForm = () => {
   const navigate = useNavigate();
   const [vendor, setVendor] = useState('');
   const { contact } = useParams();
   useEffect(() => {
-    axios.get(`https://event-proposal-backend-w3o5.onrender.com/vendorproposals/${contact}`)
+    axios.get(`${api}/vendorproposals/${contact}`)
       .then((response) => {
         setVendor(response.data.vendor);
       })
@@ -88,7 +89,7 @@ const ProposalForm = () => {
     event.preventDefault();
     const vendorName = vendor.username
     const vendorContact = vendor.contact
-    axios.post(`https://event-proposal-backend-w3o5.onrender.com/vendorcreateproposal/${vendor?.contact}`, {
+    axios.post(`${api}/vendorcreateproposal/${vendor?.contact}`, {
       vendorName: vendorName,
       vendorContact: vendorContact,
       eventName: eventName,

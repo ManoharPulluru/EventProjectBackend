@@ -3,11 +3,12 @@ import Header from './Header'
 import ProposalForm from './ProposalForm'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import api from '../api'
 const ProposalCreatePage = () => {
   const [vendor,setVendor] = useState('');
   const { contact } = useParams();
   useEffect(() => {
-    axios.get(`https://event-proposal-backend-w3o5.onrender.com/vendorproposals/${contact}`)
+    axios.get(`${api}/vendorproposals/${contact}`)
       .then((response) => {
         setVendor(response.data.vendor);
       })

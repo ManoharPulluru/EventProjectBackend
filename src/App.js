@@ -24,7 +24,7 @@ const App = () => {
         <Route path='/usersignin' element={<UserLoginPage/>}/>
         <Route path='/usersignup' element={<UserSignupPage/>}/>
         <Route path='/userwelcome/:contact' element={<UserWelcome/>}/>
-        <Route path='/openevent/:eventname/:contact' element={<OpenEvent/>} />
+        <Route path='/openevent/:eventname/:contact/:vcontact' element={<OpenEvent/>} />
         </Routes>
       </BrowserRouter>
     </>

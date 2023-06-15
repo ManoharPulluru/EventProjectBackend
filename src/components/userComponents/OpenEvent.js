@@ -4,15 +4,16 @@ import axios from 'axios';
 import Header from '../Header';
 import '../../styles/openeve.css';
 import { useNavigate } from 'react-router-dom';
+import api from '../../api';
 const OpenEvent = () => {
   const navigate = useNavigate();
-  const { eventname, contact } = useParams();
+  const { eventname, contact,vcontact } = useParams();
   const [userData, setUserData] = useState(null);
   const [eventData, setEventData] = useState(null);
 
   useEffect(() => {
     axios
-      .get(`https://event-proposal-backend-w3o5.onrender.com/finduser/${contact}`)
+      .get(`${api}/finduser/${contact}`)
       .then((response) => {
         setUserData(response.data);
       })
@@ -20,18 +21,18 @@ const OpenEvent = () => {
         console.error(error);
       });
 
-    axios.get(`https://event-proposal-backend-w3o5.onrender.com/getglobaldata/${eventname}/${contact}`)
+    axios.get(`${api}/getglobaldata/${eventname}/${vcontact}`)
       .then((response) => {
         setEventData(response.data);
       })
       .catch((error) => {
         console.error(error);
       });
-  }, [eventname, contact]);
+  }, [eventname, contact, vcontact]);
 
 const toggleSelect=()=>{
 
-  axios.get(`https://event-proposal-backend-w3o5.onrender.com/updateuserselections/${eventData.eventName}/${eventData.vendorContact}/${userData.contact}`).then((res)=>{
+  axios.get(`${api}/updateuserselections/${eventData.eventName}/${eventData.vendorContact}/${userData.contact}`).then((res)=>{
     alert('Event added to Selections');
     navigate(`/userwelcome/${userData.contact}`)
   }).catch((err)=>{

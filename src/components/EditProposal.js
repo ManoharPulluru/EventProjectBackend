@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../styles/editProp.css';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import api from '../api';
 const EditProposal = () => {
     const navigate = useNavigate()
   const [vendorSelections, setVendorSelections] = useState('');
@@ -10,7 +11,7 @@ const EditProposal = () => {
 
   useEffect(() => {
     axios
-      .get(`https://event-proposal-backend-w3o5.onrender.com/vendorproposals/editproposal/${contact}`)
+      .get(`${api}/vendorproposals/editproposal/${contact}`)
       .then((response) => {
         setVendorSelections(response.data);
       })
@@ -33,7 +34,7 @@ const EditProposal = () => {
 
   const handleSubmit = () => {
     console.log('Done');
-    axios.post(`https://event-proposal-backend-w3o5.onrender.com/vendorproposals/editproposal/${vendorSelections.eventName}/${contact}`,{
+    axios.post(`${api}/vendorproposals/editproposal/${vendorSelections.eventName}/${contact}`,{
         eventName,placeOfEvent,proposalType,eventType,budget,from,to,description,images,foodPreferences,events
     }).then((res)=>{
         alert(res.data);
