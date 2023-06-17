@@ -74,15 +74,15 @@ const toggleSelect=()=>{
             <div>
               <b>Venue and Arrangements</b>
             </div>
-            <div>{eventData.placeOfEvent}</div>
-            <div>{eventData.description}</div>
+            <div>{eventData?.placeOfEvent}</div>
+            <div>{eventData?.description}</div>
           </div>
           <div className='row2col3-eve'>
             <div>
               <b>Food Preferences</b>
             </div>
             {eventData && eventData.foodPreferences && (
-              <div>{eventData.foodPreferences}</div>
+              <div>{eventData?.foodPreferences}</div>
             )}
           </div>
         </div>
@@ -110,9 +110,9 @@ const toggleSelect=()=>{
               <b>Contacts | 12</b>
             </div>
             <br></br>
-              <div>{eventData.vendorContact}</div>
-              <div>{eventData.vendorContact}</div>
-              <div>{eventData.vendorContact}</div>
+              <div>{eventData?.vendorContact}</div>
+              <div>{eventData?.vendorContact}</div>
+              <div>{eventData?.vendorContact}</div>
           </div>
           <div className='row3col3-eve'>
             <div>
