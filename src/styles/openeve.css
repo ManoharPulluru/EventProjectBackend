@@ -39,6 +39,8 @@
 }
 .eve-prop {
     width: 50%;
+    display: flex;
+    flex-direction: row;
 }
 .eve-cont {
     width: 50%;
@@ -153,4 +155,26 @@
     border-radius: 4px;
     padding: 5px;
     border: 1px solid #0078DD;
+}
+
+.eve-dates{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.9vw;
+    margin-top: 1vw;
+}
+.det-div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vw;
+    gap: 1vw;
+}
+.det-div-1 {
+    width: 50%;
+    height: 100%;
+}
+.ev-dat{
+    background-color: #D9ECFF;
+    font-weight: 600;
+    margin-left: 0.5vw;
 }

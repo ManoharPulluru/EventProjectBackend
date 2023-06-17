@@ -44,7 +44,7 @@ const toggleSelect=()=>{
       <Header data={userData} />
       <div className='open-eve-body'>
         <div className='row1-eve'>
-          <div className='eve-prop'>Proposals {'<'} Contract</div>
+          <div className='eve-prop'><div>Proposals {' < '}</div><div>{eventData?.eventName}</div></div>
           <div className='eve-cont'>
             <button className='select-btn-ev' onClick={toggleSelect} >SELECT</button>
           </div>
@@ -60,10 +60,14 @@ const toggleSelect=()=>{
             <div className='row2col1-eve-card'>
               <div><b>Name:</b> {eventData?.vendorName}</div>
               <div><b>Email:</b> user123@gmail.com</div>
-              <div><b>From:</b> {eventData?.from?.slice(0, 10)}</div>
-              <div><b>To:</b> {eventData?.to?.slice(0, 10)}</div>
-              <div><b>Event Type:</b> {eventData?.eventType}</div>
-              <div><b>Event Class:</b> {eventData?.proposalType}</div>
+              <div className='eve-dates'>
+              <div className='det-div-1'><b>From:</b> {eventData?.from?.slice(8, 10)+' '+eventData?.from?.slice(5, 7)+' '+eventData?.from?.slice(0, 4)}</div>
+              <div className='det-div-1'><b>To:</b> {eventData?.to?.slice(8, 10)+' '+eventData?.to?.slice(5, 7)+' '+eventData?.to?.slice(0, 4)}</div>
+              </div>
+              <div className='det-div'>
+              <div className='det-div-1'><b>Event Type:</b> <div className='ev-dat'>{eventData?.eventType}</div></div>
+              <div className='det-div-1'><b>Event Class:</b> <div>{eventData?.proposalType}</div></div>
+              </div>
             </div>
           </div>
           <div className='row2col2-eve'>

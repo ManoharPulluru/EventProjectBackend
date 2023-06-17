@@ -21,19 +21,23 @@ const VenderProposalCard1 = (props) => {
         });
     }, [contact]);
     const ven = props.data;
-const toggleDelete = () => {
-  const confirmation = window.confirm('Are you sure you want to delete this event?');
-  if (confirmation) {
-    axios.delete(`${api}/vendorproposals/${ven.eventName}/${vendor.contact}`)
-      .then((res) => {
-        alert('Event Deleted');
-        window.location.reload();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
-};
+    const toggleDelete = () => {
+      const confirmation = window.confirm('Are you sure you want to delete this event?');
+      if (confirmation) {
+        console.log('Event Name:', ven.eventName);
+        console.log('Vendor Contact:', vendor.contact);
+        
+        axios.delete(`${api}/vendorproposals/${ven.eventName}/${vendor.contact}`)
+          .then((res) => {
+            alert('Event Deleted');
+            window.location.reload();
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    };
+    
 const toggleEdit=()=>{
     navigate(`/vendorproposals/editproposal/${vendor.contact}`)
 }
