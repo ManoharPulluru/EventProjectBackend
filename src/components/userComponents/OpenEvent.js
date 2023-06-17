@@ -74,9 +74,8 @@ const toggleSelect=()=>{
             <div>
               <b>Venue and Arrangements</b>
             </div>
-            {eventData && eventData.placeOfEvent && (
-              <div>{eventData.placeOfEvent}</div>
-            )}
+            <div>{eventData.placeOfEvent}</div>
+            <div>{eventData.description}</div>
           </div>
           <div className='row2col3-eve'>
             <div>
@@ -110,9 +109,10 @@ const toggleSelect=()=>{
             <div>
               <b>Contacts | 12</b>
             </div>
-            {eventData && eventData.vendorContact && (
+            <br></br>
               <div>{eventData.vendorContact}</div>
-            )}
+              <div>{eventData.vendorContact}</div>
+              <div>{eventData.vendorContact}</div>
           </div>
           <div className='row3col3-eve'>
             <div>
